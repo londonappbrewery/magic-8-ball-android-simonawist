@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
         final ImageView ballDisplay = findViewById(R.id.image_eightBall);
 
-        final int[] ballArray = {
+        final int[] ballArray = new int[] {
                 R.drawable.ball1,
                 R.drawable.ball2,
                 R.drawable.ball3,
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Random randomNumberGenerator = new Random();
-                int number = randomNumberGenerator.nextInt(4);
+                int number = randomNumberGenerator.nextInt(5);
                 ballDisplay.setImageResource(ballArray[number]);
             }
         });
